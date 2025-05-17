@@ -88,7 +88,7 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
                 </p>
                 <p className="text-lg md:text-xl font-bold mb-2">
                   Come back soon from Mahabaleshwar! I can't wait to meet you again and go for 
-                  our walks behind Rankala.
+                  our walks backside of Rankala.
                 </p>
                 <div className="text-right text-sm opacity-80">- Your best friend <i> Yogyaa </i></div>
               </div>

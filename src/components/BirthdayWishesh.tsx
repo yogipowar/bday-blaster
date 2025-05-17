@@ -14,15 +14,15 @@ const BirthdayWishes: React.FC = () => {
 
   const images = [
     {
-      url: "../../public/sn-1.jpg",
+      url: "/sn-1.jpg",
       caption: "Perfect Trip🥰"
     },
     {
-      url: "../../public/sn-3.jpg",
+      url: "/sn-3.jpg",
       caption: "Missing Those days🥹"
     },
     {
-      url: "../../public/sn-2.jpg",
+      url: "/sn-2.jpg",
       caption: "Maintaining Distance🫣😅"
     }
   ];

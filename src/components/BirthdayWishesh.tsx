@@ -65,7 +65,7 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
       {showAnimations && (
         <>
           <Confetti />
-          <Balloons />
+          {/* <Balloons /> */}
         </>
       )}
 
@@ -120,9 +120,8 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
                 <p className="text-lg md:text-xl mb-6 leading-relaxed">
                 It’s crazy how life brings people together at the perfect time. Just two months ago, we didn’t even know each other, and Now here we are — sharing secrets, opening up about our families, exchanging flirty jokes, diving into cheeky conversations, and even having our intense daily fights — all of it feels like we’ve known each other forever. You’ve become more than just a friend to me; you’ve become someone I genuinely rely on.Thank you for choosing me as your best friend and letting me share this beautiful bond with you.
                 </p>
-                <p className="text-lg md:text-xl font-bold mb-2">
-                  Come back soon from Mahabaleshwar! I can't wait to meet you again and go for 
-                  our walks backside of Rankala.
+                <p className="text-lg md:text-xl font-semibold mb-2">
+                Come back soon from Mahabaleshwar. Missing our walks at the backside of Rankala — hoping we get to do that again soon.
                 </p>
                 <div className="text-right text-sm opacity-80">- Your best friend <i> Yogyaa </i></div>
               </div>

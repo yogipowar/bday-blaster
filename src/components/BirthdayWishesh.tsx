@@ -76,7 +76,7 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
             Happy Birthday Shraddha!
           </h1>
           <p className="text-xl text-purple-800 animate-fadeIn">
-            On this special day, celebrating the amazing person you are!
+          Cheers to the beautiful soul you are — today is all about you!
           </p>
         </div>
 

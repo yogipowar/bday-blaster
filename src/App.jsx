@@ -1,3 +1,5 @@
+// @ts-check
+
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Welcome from './components/Welcome';

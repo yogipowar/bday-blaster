@@ -6,7 +6,7 @@
     },
     {
       "src": "/wishes",
-      "dest": "/wishes"
+      "dest": "/"
     }
   ],
   "buildCommand": "npm run build",

@@ -36,7 +36,7 @@ const Welcome: React.FC = () => {
           
           <button 
             onClick={handleSurpriseClick}
-            className="surprise-button bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center justify-center mx-auto"
+            className="surprise-button bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 px-8 rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center justify-center mx-auto"
           >
             <Sparkles className="mr-2" size={20} />
             Click for a Surprise!

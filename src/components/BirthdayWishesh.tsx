@@ -12,6 +12,21 @@ const BirthdayWishes: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
   const [showAnimations, setShowAnimations] = useState(true);
 
+  const images = [
+    {
+      url: "../../public/sn-1.jpg",
+      caption: "Perfect Trip🥰"
+    },
+    {
+      url: "../../public/sn-3.jpg",
+      caption: "Missing Those days🥹"
+    },
+    {
+      url: "../../public/sn-2.jpg",
+      caption: "Maintaining Distance🫣😅"
+    }
+  ];
+
 //   useEffect(() => {
 //     const timer = setTimeout(() => {
 //       const quoteElement = document.getElementById('friendship-quote');
@@ -57,12 +72,31 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
       <div className="max-w-4xl mx-auto px-4 py-10">
         {/* Header */}
         <div className="birthday-header mb-12 relative z-10">
-          <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-700 mb-4 animate-bounce-slow">
+          <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text md:leading-normal leading-tight bg-gradient-to-r from-pink-600 to-purple-700 mb-4 animate-bounce-slow">
             Happy Birthday Shraddha!
           </h1>
           <p className="text-xl text-purple-800 animate-fadeIn">
             On this special day, celebrating the amazing person you are!
           </p>
+        </div>
+
+         {/* Photo Gallery */}
+         <div className="gallery-section mb-16">
+          <h2 className="text-3xl font-bold text-purple-700 mb-8">Precious Moments</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {images.map((image, index) => (
+              <div key={index} className="relative group overflow-hidden rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105">
+                <img 
+                  src={image.url} 
+                  alt={image.caption}
+                  className="w-full h-64 object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                  <p className="text-white text-sm">{image.caption}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Birthday Wishes Content */}
@@ -84,7 +118,7 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
               <div className="absolute -top-5 -left-5 text-7xl text-purple-300 opacity-70">"</div>
               <div className="quote-content relative z-10">
                 <p className="text-lg md:text-xl mb-6 leading-relaxed">
-                It’s crazy how life brings people together at the perfect time. Just two months ago, we didn’t even know each other, and now here we are — sharing secrets, talking about our families, laughing over flirty jokes and cheeky chats like we’ve known each other forever. You’ve become more than just a friend to me; you’ve become someone I genuinely rely on.Thank you for choosing me as your best friend and letting me share this beautiful bond with you.
+                It’s crazy how life brings people together at the perfect time. Just two months ago, we didn’t even know each other, and Now here we are — sharing secrets, opening up about our families, exchanging flirty jokes, diving into cheeky conversations, and even having our intense daily fights — all of it feels like we’ve known each other forever. You’ve become more than just a friend to me; you’ve become someone I genuinely rely on.Thank you for choosing me as your best friend and letting me share this beautiful bond with you.
                 </p>
                 <p className="text-lg md:text-xl font-bold mb-2">
                   Come back soon from Mahabaleshwar! I can't wait to meet you again and go for 
@@ -100,7 +134,7 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
           <div className="comment-toggle mt-12 mb-6">
             <button 
               onClick={() => setShowForm(!showForm)}
-              className="flex items-center mx-auto bg-purple-100 text-purple-700 px-6 py-3 rounded-full font-medium hover:bg-purple-200 transition-all"
+              className="flex items-center mx-auto text-purple-700 px-6 py-3 rounded-full font-medium bg-purple-200 transition-all"
             >
               <MessageCircle className="mr-2" size={18} />
               {showForm ? 'Hide Message Form' : 'Click to Share Your Thoughts, Shraddha!'}

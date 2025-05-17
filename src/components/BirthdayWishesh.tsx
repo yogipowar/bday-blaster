@@ -25,7 +25,7 @@ const BirthdayWishes: React.FC = () => {
 
 const form = useRef<HTMLFormElement | null>(null);
 
-const sendEmail = (e) => {
+const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   
     emailjs

@@ -38,6 +38,13 @@ const BirthdayWishes: React.FC = () => {
 //     return () => clearTimeout(timer);
 //   }, []);
 
+useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, []);
+
 const form = useRef<HTMLFormElement | null>(null);
 
 const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
@@ -133,10 +140,10 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
           <div className="comment-toggle mt-12 mb-6">
             <button 
               onClick={() => setShowForm(!showForm)}
-              className="flex items-center mx-auto text-purple-700 px-6 py-3 rounded-full font-medium bg-purple-200 transition-all"
+              className="flex items-center justify-center text-left mx-auto text-purple-700 px-6 py-3 rounded-full font-medium bg-purple-200 transition-all"
             >
               <MessageCircle className="mr-2" size={18} />
-              {showForm ? 'Hide Message Form' : 'Click to Share Your Thoughts, Shraddha!'}
+              {showForm ? 'Click to Hide Message Form' : 'Click to Share Your Thoughts, Shraddha!'}
             </button>
           </div>
 
